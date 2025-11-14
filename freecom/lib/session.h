@@ -1,0 +1,71 @@
+/*#######################################################################
+# RDOS operating system
+# Copyright (C) 1988-2025, Leif Ekblad
+#
+# MIT License
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+#
+# The author of this program may be contacted at leif@rdos.net
+#
+# session.h
+# Session class
+#
+########################################################################*/
+
+#ifndef _SESSION_H
+#define _SESSION_H
+
+#include "cmd.h"
+#include "cmdfact.h"
+#include "part.h"
+#include "strlist.h"
+#include "keyboard.h"
+#include "sigdev.h"
+#include "interact.h"
+
+class TArg;
+
+class TSession : public TInteract
+{
+public:
+    TSession(TKeyboardDevice *Keyboard);
+    TSession(const TSession &source);
+    virtual ~TSession();
+
+    virtual void DisplayPrompt();
+    virtual void Run();
+
+    void Run(const char *param);
+    int Run(const char *name, TArg *ArgList);
+
+protected:
+    void WriteWelcome();
+
+    const char *GetArg(int ArgNr);
+    TString ExpandParam(const char *param);
+
+    TString FName;
+    TArg *FArgList;
+
+    static int Count;
+
+};
+
+#endif
