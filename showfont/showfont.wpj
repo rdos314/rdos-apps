@@ -4,9 +4,9 @@ projectIdent
 VpeMain
 1
 WRect
-480
-256
-8064
+0
+0
+8016
 10240
 2
 MProject
@@ -29,9 +29,9 @@ VComponent
 8
 WRect
 384
-369
+360
 5680
-4285
+4276
 0
 0
 9
@@ -39,5 +39,5 @@ WFileName
 12
 showfont.tgt
 0
-0
+3
 7
