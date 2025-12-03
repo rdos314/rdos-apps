@@ -92,8 +92,8 @@ r????WLANG_i
 0
 23
 WString
-43
-"\rdos-kernel;\rdos-classlib;$(%watcom)/rh"
+49
+"\rdos-user\base;\rdos-user\kernel;$(%watcom)/rh"
 24
 MVState
 25
