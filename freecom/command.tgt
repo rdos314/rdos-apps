@@ -92,8 +92,8 @@ r????WLANG_i
 0
 23
 WString
-75
-".\lib;.\lang;\rdos-kernel;\rdos-classlib;\rdos-classlib\zip;$(%watcom)/rh"
+77
+".\lib;.\lang;\rdos-user\base;\rdos-user\kernel;\rdos-user\zip;$(%watcom)/rh"
 24
 MVState
 25
@@ -1455,8 +1455,8 @@ WVList
 0
 327
 MItem
-27
-\rdos-classlib\classlib.lib
+23
+\rdos-user\classlib.lib
 328
 WString
 3
