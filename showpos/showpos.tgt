@@ -68,8 +68,8 @@ r????WLANG_i
 0
 17
 WString
-43
-"\rdos-kernel;\rdos-classlib;$(%watcom)/rh"
+49
+"\rdos-user\base;\rdos-user\kernel;$(%watcom)/rh"
 18
 MRState
 19
@@ -139,8 +139,8 @@ WVList
 0
 33
 MItem
-27
-\rdos-classlib\classlib.lib
+23
+\rdos-user\classlib.lib
 34
 WString
 3
