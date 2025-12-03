@@ -4,10 +4,10 @@ projectIdent
 VpeMain
 1
 WRect
-480
-256
-7936
-9216
+0
+0
+8016
+10240
 2
 MProject
 3
@@ -29,9 +29,9 @@ VComponent
 8
 WRect
 368
-891
+881
 5664
-4266
+4257
 0
 0
 9
@@ -39,5 +39,5 @@ WFileName
 9
 httpd.tgt
 0
-0
+3
 7
